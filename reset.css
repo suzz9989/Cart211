@@ -1,0 +1,98 @@
+/* Basic CSS reset */
+
+/* 1. Predictable box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins */
+* {
+  margin: 0;
+}
+
+/* 3. Text size adjustment on mobile */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 4. Minimum height and text rendering */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Block-level media that fit their container */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Form controls inherit typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 7. Tighter, balanced headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+/* 8. Paragraphs: avoid orphans */
+p {
+  text-wrap: pretty;
+}
+
+/* 9. Prevent text overflow */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 10. Navigation lists without bullets */
+nav ul,
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+nav a,
+footer a,
+figure a {
+  text-decoration: none;
+}
+
+/* 11. Links */
+a {
+  color: inherit;
+  text-decoration-skip-ink: auto;
+}
+
+/* 12. Button cursor */
+button {
+  cursor: pointer;
+}
+
+/* 13. Respect the reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
